@@ -1,0 +1,77 @@
+---
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Stories", href: "#stories" },
+  { name: "Resources", href: "#resources" },
+  { name: "Get Involved", href: "#get-involved" }
+];
+---
+
+<header class="fixed w-full z-50 transition-all duration-300" id="header">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center">
+          <span class="text-primary-800 text-2xl font-serif font-bold">GlobalWord</span>
+          <span class="text-accent-600 text-2xl font-serif font-bold">Mission</span>
+        </a>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <div class="flex md:hidden">
+        <button type="button" id="mobile-menu-button" class="text-earth-800 hover:text-primary-700 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Desktop menu -->
+      <nav class="hidden md:flex space-x-8">
+        {navItems.map(item => (
+          <a href={item.href} class="text-earth-800 hover:text-primary-700 font-medium transition-colors duration-200">{item.name}</a>
+        ))}
+      </nav>
+      
+      <div class="hidden md:flex">
+        <a href="#donate" class="bg-accent-600 hover:bg-accent-700 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200">
+          Donate
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile menu -->
+  <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      {navItems.map(item => (
+        <a href={item.href} class="block px-3 py-2 text-earth-800 hover:text-primary-700 font-medium">{item.name}</a>
+      ))}
+      <a href="#donate" class="block px-3 py-2 mt-4 bg-accent-600 hover:bg-accent-700 text-white font-semibold rounded-md transition-colors duration-200 text-center">
+        Donate
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Header scroll behavior
+  const header = document.getElementById('header');
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('bg-white', 'shadow-md');
+    } else {
+      header.classList.remove('bg-white', 'shadow-md');
+    }
+  });
+  
+  // Mobile menu toggle
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
