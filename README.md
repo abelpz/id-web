@@ -1,48 +1,103 @@
-# Astro Starter Kit: Basics
+# Idiomas Puentes Website
 
-```sh
-npm create astro@latest -- --template basics
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Astro](https://img.shields.io/badge/Astro-5.2.5-blue.svg)](https://astro.build)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-38B2AC.svg)](https://tailwindcss.com)
+
+Idiomas Puentes is a foundation dedicated to empowering minority language communities through Bible translation and discipleship resources. Our website serves as a platform to provide translation tools, training materials, and support for churches working to translate Scripture into their heart languages.
+
+## 🌟 Features
+
+- **Resource Library**: Access to translation tools and materials
+- **Training Materials**: Comprehensive guides for Bible translation
+- **Community Support**: Connect with other translation teams
+- **Multilingual Support**: Resources available in Spanish and minority languages
+- **Responsive Design**: Accessible on all devices
+- **Modern Web Technologies**: Built with Astro and Tailwind CSS
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm (v7 or later)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-org/id-web.git
+cd id-web
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. Install dependencies:
+```bash
+npm install
+```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+3. Start the development server:
+```bash
+npm run dev
+```
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+The site will be available at `http://localhost:4321`
 
-## 🚀 Project Structure
+## 🏗️ Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
+```
 /
-├── public/
-│   └── favicon.svg
+├── public/              # Static assets
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/         # Images, fonts, etc.
+│   ├── components/     # Reusable UI components
+│   ├── layouts/        # Page layouts
+│   ├── pages/          # Page components
+│   └── styles/         # Global styles
+├── astro.config.mjs    # Astro configuration
+├── tailwind.config.mjs # Tailwind CSS configuration
+└── package.json        # Project dependencies
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Development
 
-## 🧞 Commands
+### Available Scripts
 
-All commands are run from the root of the project, from a terminal:
+| Command           | Action                                      |
+|-------------------|---------------------------------------------|
+| `npm run dev`     | Start development server                    |
+| `npm run build`   | Build for production                        |
+| `npm run preview` | Preview production build locally            |
+| `npm run astro`   | Run Astro CLI commands                      |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Adding New Features
 
-## 👀 Want to learn more?
+1. Create new components in `src/components/`
+2. Add new pages in `src/pages/`
+3. Update styles in `tailwind.config.mjs` if needed
+4. Test changes locally with `npm run dev`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📚 Resources
+
+- [Astro Documentation](https://docs.astro.build)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Idiomas Puentes Translation Guidelines](link-to-guidelines)
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+For questions or support, please contact:
+- Email: [contact@idiomaspuentes.org](mailto:contact@idiomaspuentes.org)
+- Website: [www.idiomaspuentes.org](https://www.idiomaspuentes.org)

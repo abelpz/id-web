@@ -1,56 +1,76 @@
 ---
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Stories", href: "#stories" },
-  { name: "Resources", href: "#resources" },
-  { name: "Get Involved", href: "#get-involved" }
+  { name: "Inicio", href: "/" },
+  { name: "Nosotros", href: "#about" },
+  { name: "Proyectos", href: "#projects" },
+  { name: "Historias", href: "#stories" },
+  { name: "Recursos", href: "#resources" },
+  { name: "Involúcrate", href: "#get-involved" }
 ];
 ---
 
 <header class="fixed w-full z-50 transition-all duration-300" id="header">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
+    <div class="flex items-center justify-between h-24">
       <div class="flex-shrink-0">
-        <a href="/" class="flex items-center">
-          <span class="text-primary-800 text-2xl font-serif font-bold">GlobalWord</span>
-          <span class="text-accent-600 text-2xl font-serif font-bold">Mission</span>
+        <a href="/" class="flex items-center group">
+          <span class="text-primary-800 text-3xl font-display font-bold group-hover:text-primary-900 transition-colors duration-200">Idiomas</span>
+          <span class="text-accent-500 text-3xl font-display font-bold group-hover:text-accent-600 transition-colors duration-200 ml-2">Puentes</span>
         </a>
       </div>
       
       <!-- Mobile menu button -->
       <div class="flex md:hidden">
-        <button type="button" id="mobile-menu-button" class="text-earth-800 hover:text-primary-700 focus:outline-none">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button type="button" id="mobile-menu-button" class="text-earth-800 hover:text-primary-700 focus:outline-none transition-colors duration-200">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
       
       <!-- Desktop menu -->
-      <nav class="hidden md:flex space-x-8">
+      <nav class="hidden md:flex space-x-10">
         {navItems.map(item => (
-          <a href={item.href} class="text-earth-800 hover:text-primary-700 font-medium transition-colors duration-200">{item.name}</a>
+          <a 
+            href={item.href} 
+            class="text-earth-800 hover:text-primary-700 font-medium transition-all duration-200 relative group"
+          >
+            {item.name}
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-500 group-hover:w-full transition-all duration-300"></span>
+          </a>
         ))}
       </nav>
       
       <div class="hidden md:flex">
-        <a href="#donate" class="bg-accent-600 hover:bg-accent-700 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200">
-          Donate
+        <a 
+          href="#donate" 
+          class="bg-accent-500 hover:bg-accent-600 text-primary-900 font-semibold py-3 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg inline-flex items-center"
+        >
+          Donar
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
         </a>
       </div>
     </div>
   </div>
   
   <!-- Mobile menu -->
-  <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+  <div class="md:hidden hidden bg-white shadow-xl rounded-b-lg" id="mobile-menu">
+    <div class="px-4 pt-4 pb-6 space-y-3">
       {navItems.map(item => (
-        <a href={item.href} class="block px-3 py-2 text-earth-800 hover:text-primary-700 font-medium">{item.name}</a>
+        <a 
+          href={item.href} 
+          class="block px-4 py-3 text-earth-800 hover:text-primary-700 font-medium rounded-lg hover:bg-earth-50 transition-colors duration-200"
+        >
+          {item.name}
+        </a>
       ))}
-      <a href="#donate" class="block px-3 py-2 mt-4 bg-accent-600 hover:bg-accent-700 text-white font-semibold rounded-md transition-colors duration-200 text-center">
-        Donate
+      <a 
+        href="#donate" 
+        class="block px-4 py-3 mt-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg text-center"
+      >
+        Donar
       </a>
     </div>
   </div>
@@ -62,16 +82,21 @@ const navItems = [
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      header.classList.add('bg-white', 'shadow-md');
-    } else {
-      header.classList.remove('bg-white', 'shadow-md');
-    }
-  });
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-lg');
+      } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-lg');
+      }
+    });
+  }
   
   // Mobile menu toggle
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('animate-slide-down');
+    });
+  }
 </script>

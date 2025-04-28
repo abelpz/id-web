@@ -2,40 +2,66 @@
 import { Image } from 'astro:assets';
 ---
 
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
   <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-800/70 mix-blend-multiply z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/80 to-primary-700/70 mix-blend-multiply z-10"></div>
     <img 
       src="https://images.pexels.com/photos/5905498/pexels-photo-5905498.jpeg" 
-      alt="People reading Bible together" 
-      class="w-full h-full object-cover"
+      alt="Personas leyendo la Biblia juntas" 
+      class="w-full h-full object-cover transform scale-105 animate-zoom-slow"
     />
   </div>
   
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-    <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white leading-tight animate-fade-in">
-        Translating Scripture.<br />Transforming Lives.
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-white leading-tight tracking-tight animate-fade-in">
+        Traduciendo las Escrituras.<br />
+        <span class="text-accent-400">Transformando Vidas.</span>
       </h1>
-      <p class="mt-6 text-xl text-white/90 animate-slide-up animation-delay-200">
-        Empowering communities worldwide with God's Word in their heart language, building mature churches that transform communities.
+      <p class="mt-8 text-2xl text-white/90 leading-relaxed animate-slide-up animation-delay-200">
+        Empoderando comunidades alrededor del mundo con la Palabra de Dios en su idioma materno, construyendo iglesias maduras que transforman comunidades.
       </p>
-      <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 animate-slide-up animation-delay-300">
-        <a href="#projects" class="bg-white text-primary-900 hover:bg-primary-50 font-semibold py-3 px-8 rounded-md transition-colors duration-200">
-          Our Projects
+      <div class="mt-12 flex flex-col sm:flex-row justify-center gap-6 animate-slide-up animation-delay-300">
+        <a href="#projects" class="inline-flex items-center justify-center bg-white text-primary-900 hover:bg-primary-50 font-semibold py-4 px-10 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
+          Nuestros Proyectos
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
         </a>
-        <a href="#get-involved" class="bg-accent-600 hover:bg-accent-700 text-primary-900 font-semibold py-3 px-8 rounded-md transition-colors duration-200">
-          Get Involved
+        <a href="#get-involved" class="inline-flex items-center justify-center bg-accent-500 hover:bg-accent-600 text-primary-900 font-semibold py-4 px-10 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
+          Involúcrate
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </a>
       </div>
     </div>
   </div>
   
-  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-    <a href="#about" aria-label="Scroll down">
-      <svg class="w-8 h-8 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce-slow">
+    <a href="#about" aria-label="Desplazarse hacia abajo" class="group">
+      <svg class="w-10 h-10 text-white/80 group-hover:text-white transition-colors duration-200" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
         <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
     </a>
   </div>
 </section>
+
+<style>
+  @keyframes zoom-slow {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .animate-zoom-slow {
+    animation: zoom-slow 20s ease-in-out infinite alternate;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+</style>

@@ -1,22 +1,22 @@
 ---
 const stories = [
   {
-    name: "Pastor Emmanuel",
-    location: "West Africa",
-    quote: "Having Scripture in our language has transformed our church. People understand God's Word deeply now, and it's changing families and our entire community.",
-    image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg"
+    name: "María González",
+    location: "Guatemala",
+    quote: "Después de recibir la Biblia en mi idioma materno, mi comunidad ha experimentado un profundo cambio espiritual y social.",
+    image: "https://images.pexels.com/photos/5905498/pexels-photo-5905498.jpeg"
   },
   {
-    name: "Maria",
-    location: "South America",
-    quote: "I waited 67 years to read God's promises in my own language. Now I can share these truths with my grandchildren in words they understand completely.",
-    image: "https://images.pexels.com/photos/4350181/pexels-photo-4350181.jpeg"
+    name: "Juan Pérez",
+    location: "Perú",
+    quote: "La capacitación recibida nos ha equipado para servir mejor a nuestra comunidad y compartir el mensaje de esperanza.",
+    image: "https://images.pexels.com/photos/5905498/pexels-photo-5905498.jpeg"
   },
   {
-    name: "Raj & Priya",
-    location: "South Asia",
-    quote: "The translated materials equipped us to start five new house churches in villages that had never heard the gospel before.",
-    image: "https://images.pexels.com/photos/5799379/pexels-photo-5799379.jpeg"
+    name: "Ana Silva",
+    location: "Brasil",
+    quote: "El programa de alfabetización bíblica ha transformado vidas, permitiendo a las personas leer y estudiar la Palabra de Dios.",
+    image: "https://images.pexels.com/photos/5905498/pexels-photo-5905498.jpeg"
   }
 ];
 ---
@@ -24,9 +24,9 @@ const stories = [
 <section id="stories" class="py-20 bg-earth-50">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-primary-900 mb-4">Transformation Stories</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Historias de Impacto</h2>
       <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
-      <p class="text-lg text-earth-700">Real stories of how Bible translation and church growth initiatives are transforming communities around the world.</p>
+      <p class="text-lg text-earth-700">Descubre cómo la Palabra de Dios está transformando vidas y comunidades alrededor del mundo.</p>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -36,7 +36,7 @@ const stories = [
             <img src={story.image} alt={story.name} class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-primary-900/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
               <a href="#" class="bg-white text-primary-800 hover:bg-primary-50 font-medium py-2 px-6 rounded-md transition-colors duration-200">
-                Read Full Story
+                Leer Historia Completa
               </a>
             </div>
           </div>
@@ -54,11 +54,12 @@ const stories = [
     </div>
     
     <div class="mt-16 max-w-2xl mx-auto bg-primary-50 rounded-lg p-8 text-center">
-      <h3 class="text-2xl font-serif font-bold text-primary-900 mb-4">Share Your Story</h3>
-      <p class="text-earth-600 mb-6">Has Bible translation or our ministry impacted your community? We'd love to hear and share your story of transformation.</p>
+      <h3 class="text-2xl font-bold text-primary-900 mb-4">Comparte Tu Historia</h3>
+      <p class="text-earth-600 mb-6">¿La traducción bíblica o nuestro ministerio ha impactado tu comunidad? Nos encantaría escuchar y compartir tu historia de transformación.</p>
       <a href="#" class="inline-flex items-center justify-center bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-md transition-colors duration-200">
-        Submit Your Story
+        Envía Tu Historia
       </a>
     </div>
   </div>
+</section>
 </section>
