@@ -1,0 +1,56 @@
+---
+const prayerPoints = [
+  {
+    title: "Oración por Traductores",
+    description: "Ora por sabiduría y protección para nuestros equipos de traducción trabajando en áreas remotas.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>`
+  },
+  {
+    title: "Oración por Comunidades",
+    description: "Intercede por las comunidades que están recibiendo la Palabra de Dios en su idioma por primera vez.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>`
+  },
+  {
+    title: "Oración por Recursos",
+    description: "Pide por provisión de recursos y financiamiento para continuar con los proyectos de traducción.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>`
+  }
+];
+---
+
+<section id="prayer" class="py-20 bg-primary-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Red de Oración</h2>
+      <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
+      <p class="text-lg text-earth-700">Únete a nuestra red global de intercesión y sé parte del avance del Reino de Dios a través de la oración.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      {prayerPoints.map(point => (
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="text-primary-600 mb-4" set:html={point.icon}></div>
+          <h3 class="text-xl font-bold text-primary-800 mb-3">{point.title}</h3>
+          <p class="text-earth-600">{point.description}</p>
+        </div>
+      ))}
+    </div>
+    
+    <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">
+      <h3 class="text-2xl font-bold text-primary-900 mb-6 text-center">Recibe Nuestras Guías de Oración</h3>
+      <p class="text-earth-600 mb-6 text-center">Suscríbete para recibir actualizaciones semanales de oración y guías específicas para interceder por nuestros proyectos.</p>
+      <form class="flex flex-col sm:flex-row gap-4">
+        <input type="email" placeholder="Tu correo electrónico" class="flex-grow px-4 py-3 rounded-md border border-earth-300 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+        <button type="submit" class="bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-6 rounded-md transition-colors duration-200">
+          Suscribirse
+        </button>
+      </form>
+    </div>
+  </div>
+</section> 

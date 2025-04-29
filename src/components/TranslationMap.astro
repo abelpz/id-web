@@ -1,0 +1,187 @@
+---
+// Define the translation need areas
+const translationNeeds = [
+  { 
+    id: 1, 
+    name: "Región Maya", 
+    country: "Guatemala", 
+    coordinates: { x: 205, y: 396 },
+    languages: 5,
+    population: "1.2 millones"
+  },
+  { 
+    id: 2, 
+    name: "Amazonía Peruana", 
+    country: "Perú", 
+    coordinates: { x: 240, y: 455 },
+    languages: 8,
+    population: "850 mil"
+  },
+  { 
+    id: 3, 
+    name: "Región Andina", 
+    country: "Bolivia", 
+    coordinates: { x: 260, y: 485 },
+    languages: 4,
+    population: "1.5 millones"
+  },
+  { 
+    id: 4, 
+    name: "Región Amazónica", 
+    country: "Brasil", 
+    coordinates: { x: 300, y: 450 },
+    languages: 12,
+    population: "2.3 millones"
+  },
+  { 
+    id: 5, 
+    name: "Región Caribe", 
+    country: "Colombia", 
+    coordinates: { x: 235, y: 415 },
+    languages: 6,
+    population: "950 mil"
+  },
+  { 
+    id: 6, 
+    name: "Región Guaraní", 
+    country: "Paraguay", 
+    coordinates: { x: 275, y: 510 },
+    languages: 3,
+    population: "700 mil"
+  }
+];
+
+// Path to the SVG map
+const worldMapPath = '/assets/maps/world.svg';
+---
+
+<section id="translation-map" class="py-20 bg-earth-50 overflow-hidden">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Áreas de Necesidad</h2>
+      <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
+      <p class="text-lg text-earth-700">Estas son las regiones de América Latina donde trabajamos para llevar la Palabra de Dios a idiomas aún sin traducción bíblica.</p>
+    </div>
+    
+    <div class="max-w-5xl mx-auto relative">
+      <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-10">
+        <div class="relative map-container">
+          <!-- Latin America Map (Focused view of the World Map) -->
+          <div class="latin-america-map-container w-full overflow-hidden" style="min-height: 400px; position: relative;">
+            <img src="/assets/maps/world.svg" class="latin-america-map w-full h-auto" alt="Mapa de América Latina" 
+                 style="transform: scale(2); transform-origin: 240px 450px;" />
+            
+            <!-- Dots for Translation Need Areas -->
+            <svg class="absolute top-0 left-0 w-full h-full pointer-events-none">
+              {translationNeeds.map(area => (
+                <g class="area-marker" data-tippy-content={`${area.name}, ${area.country}: ${area.languages} idiomas, ${area.population} personas`}>
+                  <circle 
+                    cx={area.coordinates.x} 
+                    cy={area.coordinates.y} 
+                    r="8" 
+                    class="fill-accent-500 pulse-dot cursor-pointer pointer-events-auto" 
+                  />
+                  <circle 
+                    cx={area.coordinates.x} 
+                    cy={area.coordinates.y} 
+                    r="16" 
+                    class="fill-accent-500 opacity-30 animate-ping-slow" 
+                  />
+                </g>
+              ))}
+            </svg>
+          </div>
+          
+          <!-- Legend -->
+          <div class="absolute bottom-4 right-4 bg-white bg-opacity-80 p-3 rounded-lg shadow-md">
+            <div class="flex items-center text-sm">
+              <span class="inline-block w-4 h-4 rounded-full bg-accent-500 mr-2"></span>
+              <span class="text-earth-800 font-medium">Áreas de necesidad de traducción</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Additional Info Below Map -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div class="bg-earth-50 p-4 rounded-xl">
+            <p class="text-3xl font-bold text-primary-800">38</p>
+            <p class="text-earth-600">Idiomas sin traducción</p>
+          </div>
+          <div class="bg-earth-50 p-4 rounded-xl">
+            <p class="text-3xl font-bold text-primary-800">6.5M+</p>
+            <p class="text-earth-600">Personas sin acceso</p>
+          </div>
+          <div class="bg-earth-50 p-4 rounded-xl">
+            <p class="text-3xl font-bold text-primary-800">12</p>
+            <p class="text-earth-600">Proyectos en progreso</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-12 text-center">
+      <a 
+        href="/projects" 
+        class="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
+      >
+        Ver Todos los Proyectos
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .latin-america-map-container {
+    position: relative;
+  }
+
+  .latin-america-map {
+    transition: transform 0.3s ease;
+  }
+  
+  .map-container:hover .latin-america-map {
+    transform: scale(2.1) !important;
+    transform-origin: 240px 450px !important;
+  }
+  
+  .pulse-dot {
+    transition: r 0.2s ease;
+  }
+  
+  .pulse-dot:hover {
+    r: 10;
+  }
+  
+  @keyframes ping-slow {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
+  .animate-ping-slow {
+    animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+</style>
+
+<script>
+  // Initialize tooltips when component loads
+  import tippy from 'tippy.js';
+  import 'tippy.js/dist/tippy.css';
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize tooltips for map dots
+    tippy('.area-marker', {
+      placement: 'top',
+      arrow: true,
+      theme: 'light',
+    });
+  });
+</script> 

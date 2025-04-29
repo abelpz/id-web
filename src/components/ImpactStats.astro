@@ -1,0 +1,57 @@
+---
+const stats = [
+  {
+    number: "7,000+",
+    label: "Idiomas en el Mundo",
+    description: "Más de 7,000 idiomas hablados en el mundo, cada uno con su propia cultura y necesidad de la Palabra de Dios."
+  },
+  {
+    number: "1,600+",
+    label: "Proyectos Activos",
+    description: "Más de 1,600 proyectos de traducción bíblica activos en diferentes partes del mundo."
+  },
+  {
+    number: "3.5M",
+    label: "Personas Alcanzadas",
+    description: "Más de 3.5 millones de personas que ahora tienen acceso a la Biblia en su idioma materno."
+  },
+  {
+    number: "45+",
+    label: "Países",
+    description: "Trabajando en más de 45 países, colaborando con iglesias locales y comunidades."
+  }
+];
+---
+
+<section id="impact-stats" class="py-20 bg-earth-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Nuestro Impacto</h2>
+      <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
+      <p class="text-lg text-earth-700">Estadísticas que muestran el alcance y la importancia de nuestro trabajo en la traducción bíblica.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {stats.map(stat => (
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="text-4xl font-bold text-primary-700 mb-2">{stat.number}</div>
+          <h3 class="text-xl font-bold text-primary-800 mb-3">{stat.label}</h3>
+          <p class="text-earth-600 text-sm">{stat.description}</p>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-16 max-w-2xl mx-auto bg-primary-50 rounded-lg shadow-md p-8 text-center">
+      <h3 class="text-2xl font-bold text-primary-900 mb-4">¿Quieres ser parte de este impacto?</h3>
+      <p class="text-earth-600 mb-6">Cada donación, cada oración y cada persona que se une a nuestro equipo contribuye a que más personas tengan acceso a la Palabra de Dios en su idioma.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#donate" class="bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-6 rounded-md transition-colors duration-200">
+          Donar Ahora
+        </a>
+        <a href="#volunteer" class="bg-white hover:bg-earth-50 text-primary-700 font-semibold py-3 px-6 rounded-md border border-primary-700 transition-colors duration-200">
+          Únete como Voluntario
+        </a>
+      </div>
+    </div>
+  </div>
+</section> 

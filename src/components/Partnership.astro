@@ -1,0 +1,72 @@
+---
+const partnershipTypes = [
+  {
+    title: "Socio Estratégico",
+    description: "Organizaciones y ministerios que colaboran con nosotros en proyectos específicos de traducción y capacitación.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+    </svg>`
+  },
+  {
+    title: "Socio Financiero",
+    description: "Individuos y organizaciones que apoyan financieramente nuestros proyectos de traducción bíblica.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>`
+  },
+  {
+    title: "Socio de Oración",
+    description: "Personas y grupos que se comprometen a orar regularmente por nuestros proyectos y equipos.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>`
+  }
+];
+---
+
+<section id="partnership" class="py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Hazte Socio</h2>
+      <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
+      <p class="text-lg text-earth-700">Únete a nuestra red de socios y sé parte de la transformación de comunidades a través de la Palabra de Dios.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      {partnershipTypes.map(type => (
+        <div class="bg-earth-50 rounded-lg shadow-md p-6">
+          <div class="text-primary-600 mb-4" set:html={type.icon}></div>
+          <h3 class="text-xl font-bold text-primary-800 mb-3">{type.title}</h3>
+          <p class="text-earth-600 mb-6">{type.description}</p>
+          <a href="#" class="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium">
+            Conoce más
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+    
+    <div class="max-w-2xl mx-auto bg-primary-50 rounded-lg shadow-md p-8">
+      <h3 class="text-2xl font-bold text-primary-900 mb-6 text-center">¿Listo para unirte?</h3>
+      <p class="text-earth-600 mb-6 text-center">Completa el formulario y nos pondremos en contacto contigo para explorar las mejores formas de colaborar.</p>
+      <form class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <input type="text" placeholder="Nombre" class="px-4 py-3 rounded-md border border-earth-300 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+          <input type="email" placeholder="Correo electrónico" class="px-4 py-3 rounded-md border border-earth-300 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+        </div>
+        <select class="w-full px-4 py-3 rounded-md border border-earth-300 focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <option value="">Tipo de socio que te interesa</option>
+          <option value="strategic">Socio Estratégico</option>
+          <option value="financial">Socio Financiero</option>
+          <option value="prayer">Socio de Oración</option>
+        </select>
+        <textarea placeholder="Mensaje" rows="4" class="w-full px-4 py-3 rounded-md border border-earth-300 focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+        <button type="submit" class="w-full bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-6 rounded-md transition-colors duration-200">
+          Enviar Solicitud
+        </button>
+      </form>
+    </div>
+  </div>
+</section> 

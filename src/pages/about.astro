@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import About from '../components/About.astro';
+import ImpactStats from '../components/ImpactStats.astro';
+---
+
+<Layout>
+  <Header />
+  
+  <main>
+    <About />
+    <ImpactStats />
+    
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Nuestra Historia</h2>
+          <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
+          <p class="text-lg text-earth-700">Desde nuestros inicios, hemos estado comprometidos con llevar la Palabra de Dios a cada lengua y cultura.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="bg-earth-50 rounded-lg shadow-md p-8">
+            <h3 class="text-2xl font-bold text-primary-800 mb-4">Nuestros Valores</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary-700">Fidelidad Bíblica</h4>
+                  <p class="text-earth-600">Comprometidos con la precisión y fidelidad en la traducción de las Escrituras.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary-700">Excelencia</h4>
+                  <p class="text-earth-600">Buscamos la excelencia en cada aspecto de nuestro trabajo.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary-700">Colaboración</h4>
+                  <p class="text-earth-600">Trabajamos en asociación con iglesias locales y comunidades.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-earth-50 rounded-lg shadow-md p-8">
+            <h3 class="text-2xl font-bold text-primary-800 mb-4">Nuestro Equipo</h3>
+            <p class="text-earth-600 mb-6">Somos un equipo diverso de creyentes apasionados, incluyendo:</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary-700">Traductores</h4>
+                  <p class="text-earth-600">Expertos en idiomas y cultura, comprometidos con la precisión.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary-700">Consultores</h4>
+                  <p class="text-earth-600">Expertos en teología y lingüística que aseguran la precisión.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <div>
+                  <h4 class="font-bold text-primary-700">Voluntarios</h4>
+                  <p class="text-earth-600">Personas dedicadas que apoyan en diversas áreas del ministerio.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout> 

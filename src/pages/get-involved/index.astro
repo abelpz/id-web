@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout>
+  <Header />
+  
+  <main>
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <h1 class="text-4xl sm:text-5xl font-bold text-primary-900 mb-4">Involúcrate</h1>
+          <div class="w-24 h-1.5 bg-accent-500 mx-auto mb-6 rounded-full"></div>
+          <p class="text-xl text-earth-700">Únete a nuestra misión de llevar la Palabra de Dios a cada lengua y cultura.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <a href="/get-involved/volunteer" class="group">
+            <div class="bg-earth-50 rounded-xl shadow-md p-8 h-full transform transition duration-300 group-hover:scale-105 group-hover:shadow-lg">
+              <div class="text-primary-600 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-primary-800 mb-4">Voluntariado</h3>
+              <p class="text-earth-600 mb-6">Únete a nuestro equipo y contribuye con tus habilidades y tiempo a la traducción bíblica.</p>
+              <span class="inline-flex items-center text-primary-700 font-medium group-hover:text-primary-900">
+                Conoce más
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </a>
+          
+          <a href="/get-involved/prayer" class="group">
+            <div class="bg-earth-50 rounded-xl shadow-md p-8 h-full transform transition duration-300 group-hover:scale-105 group-hover:shadow-lg">
+              <div class="text-primary-600 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-primary-800 mb-4">Oración</h3>
+              <p class="text-earth-600 mb-6">Únete a nuestra red de oración y apoya nuestro trabajo a través de la intercesión.</p>
+              <span class="inline-flex items-center text-primary-700 font-medium group-hover:text-primary-900">
+                Conoce más
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </a>
+          
+          <a href="/get-involved/contact" class="group">
+            <div class="bg-earth-50 rounded-xl shadow-md p-8 h-full transform transition duration-300 group-hover:scale-105 group-hover:shadow-lg">
+              <div class="text-primary-600 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-primary-800 mb-4">Contacto</h3>
+              <p class="text-earth-600 mb-6">¿Tienes preguntas o quieres explorar otras formas de involucrarte? Contáctanos.</p>
+              <span class="inline-flex items-center text-primary-700 font-medium group-hover:text-primary-900">
+                Conoce más
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout> 
